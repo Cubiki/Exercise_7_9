@@ -1,3 +1,4 @@
+//author JOSE CUBÍ ALBERT
 using System;
 
 public class Average
