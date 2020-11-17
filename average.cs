@@ -1,20 +1,29 @@
 using System;
-public class Average{
-public static void Main(){
-double a=0, b, c=0, d;
-string s;
-Console.Write("Insert a mark: ");
-s=Console.ReadLine();	// we read the mark as string to check the word "end"	 
-while(s!="end"){  // if the mark isn't an end then we pass it to double to work with it
-b=Convert.ToDouble(s);
-c++;   //counter of numbers
-a+=b;  // sum of all the notes
-Console.Write("Insert a mark: ");
-s=Console.ReadLine();
-}
-if(c!=0){
-	d=a/c;  //calculate the average
-Console.WriteLine("The average is {0}.",d);
-}
-}
+
+public class Average
+{
+    public static void Main()
+    {
+        double sum = 0, number, divider = 0, average;
+        string dateEntered;
+        
+        Console.Write("Insert a mark: ");
+        dateEntered = Console.ReadLine();
+        
+        while (dateEntered != "end")
+        {
+            number = Convert.ToDouble(dateEntered);
+            divider++;   
+            sum += number; 
+             
+            Console.Write("Insert a mark: ");
+            dateEntered = Console.ReadLine();
+        }
+        if(divider!=0)
+        {
+            average= sum / divider;
+              
+            Console.WriteLine("The average is {0}.",average);
+        }
+    }
 }
